@@ -13,7 +13,6 @@ body {
 
 #header {
   background-color: #f4acb7ff;
-  
   font-size: 150%;
   position: fixed;
   border-bottom: 20px;
@@ -232,9 +231,13 @@ body {
 /*************************/
 
 @media screen and (max-width: 640px) {
+  #header-img {
+    max-height: 80px;
+  }
   #nav-bar,
   #container-img-bio {
     flex-direction: column;
+    padding: 0;
   }
   .nav-link {
     font-size: 60%;
