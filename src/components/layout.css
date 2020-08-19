@@ -98,21 +98,22 @@ body {
 }
 
 #video {
-  margin: 50px 0 0 50px;
-  border-radius: 30px;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 #label-video {
   position: relative;
   display: flex;
   flex-direction: column-reverse;
-  margin: 10px 0 0 100px;
+  margin: 0 auto;
 }
 
 #title-video {
   font-weight: bolder;
   font-size: 1.5em;
   padding: 20px;
+  margin: 0 auto;
 }
 
 #products::before {
@@ -259,11 +260,8 @@ body {
   .img-slide {
     margin-top: 30px;
   }
-  #label-video {
-    width: 90%;
-  }
   #label-video p {
-    width: 90% !important;
+    width: 90%;
   }
 }
 @media (min-width: 640px) and (max-width:915px) { 
