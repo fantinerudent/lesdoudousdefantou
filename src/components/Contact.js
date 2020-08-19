@@ -2,19 +2,35 @@ import React, { useState } from "react"
 
 function Contact() {
   const [emailValue, setEmailValue] = useState("")
+  const [errorEmailValue, setErrorEmailValue] = useState()
+
+  function validateEmail(email) {
+    var emailReg = new RegExp(/^([\w-\.]+)@((?:[\w]+\.)+)([a-zA-Z]{2,4})/i)
+    var valid = emailReg.test(email)
+    if (!valid) {
+      return false
+    } else {
+      return true
+    }
+  }
 
   const handleChangeEmail = event => {
     setEmailValue(event.currentTarget.value)
   }
-  const handleSubmit = (event) => {
-      event.preventDefault();
-      if (emailValue) {
-          window.alert(`Je vous recontacte à l'adresse : ${emailValue}`  )
-      }
+
+  const handleSubmit = event => {
+    event.preventDefault()
+    let result = validateEmail(emailValue)
+    if (result) {
+      window.alert(`Je vous recontacte à l'adresse : ${emailValue}`)
+      setErrorEmailValue("")
+    } else {
+      setErrorEmailValue("Veuillez entrer une adresse email correcte")
+    }
   }
 
   return (
-    <div>
+    <div id='contact-container'>
       <h2 className="section-title"> Pour me contacter... </h2>
       <p>
         Ut ut tempor reprehenderit ut dolor exercitation et exercitation
@@ -35,8 +51,8 @@ function Contact() {
         nostrud culpa.
       </p>
 
-      <form id="form" onSubmit={(event) => handleSubmit(event)}>
-        <label for="email">
+      <form id="form" onSubmit={event => handleSubmit(event)}>
+        <label htmlFor="email" style={{ marginBottom: "20px" }}>
           Entrez votre email pour que je puisse revenir vers vous !
         </label>
         <input
@@ -46,7 +62,8 @@ function Contact() {
           placeholder="saisissez votre email"
           onChange={event => handleChangeEmail(event)}
         />
-        <input type="submit" />
+        {errorEmailValue && <div className="error"> {errorEmailValue} </div>}
+        <input type="submit" id="submit" />
       </form>
     </div>
   )

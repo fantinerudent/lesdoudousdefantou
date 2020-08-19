@@ -7,19 +7,27 @@ const Slider = ({ srcImg }) => {
     }
   }
   return (
-      <>
-    <div className="img-products-container" >
-      {srcImg &&
-        srcImg.map((img, i) => {
-          return (
-            <a  href={img} target="_blank">
-              <img className="img-slide" src={img} />
-            </a>
-          )
-        })}
-    </div>
-      <p style={{alignSelf: "flex-end"}}> Cliquez-sur sur l'image pour l'agrandir </p>
-      </>
+    <>
+      <div className="img-products-container">
+        {srcImg &&
+          srcImg.map((img, i) => {
+            return (
+              <a href={img} target="_blank">
+                <img className="img-slide" src={img} />
+              </a>
+            )
+          })}
+      </div>
+      <span
+        style={{
+          alignSelf: "flex-end",
+          marginRight: "20px",
+          fontStyle: "italic",
+        }}
+      >
+        Cliquez-sur sur l'image pour l'agrandir{" "}
+      </span>
+    </>
   )
 }
 

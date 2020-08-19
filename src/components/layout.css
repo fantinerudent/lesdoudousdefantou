@@ -1,16 +1,15 @@
-/* --alabaster: #d8e2dcff;
---champagne-pink: #ffe5d9ff;
---pink: #ffcad4ff;
---light-pink: #f4acb7ff;
---mountbatten-pink: #9d8189ff; */
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap");
 
 body {
   background-color: #ffe5d9ff;
   color: #9d8189ff;
+  margin: 20px;
 }
 
+/*******************/
 /*  HEADER STYLE  */
+/*******************/
+
 #header {
   background-color: #f4acb7ff;
   font-family: "EB Garamond", serif;
@@ -20,7 +19,7 @@ body {
   z-index: 1;
   top: 0;
   left: 0;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   justify-content: space-between;
   width: 100%;
   display: flex;
@@ -48,7 +47,10 @@ body {
   transform: rotate(360deg);
 }
 
+/*******************/
 /*  NAV-BAR  STYLE */
+/*******************/
+
 #nav-bar {
   padding: 20px;
   list-style-type: none;
@@ -63,7 +65,10 @@ body {
   margin: 10px;
 }
 
+/*******************/
 /* STYLE BIOGRAPHY */
+/*******************/
+
 .img-bio {
   width: 300px;
   height: 300px;
@@ -101,13 +106,14 @@ body {
   position: relative;
   display: flex;
   flex-direction: column-reverse;
- 
-}
-#label-video p {
-  font-weight: bolder;
   margin: 10px 0 0 100px;
 }
 
+#title-video {
+  font-weight: bolder;
+  font-size: 1.5em;
+  padding: 20px;
+}
 
 #products::before {
   content: "";
@@ -124,16 +130,17 @@ body {
   visibility: hidden;
 }
 
-/* GLOBAL STYLES  */
-.section-title {
-  margin:0;
-  font-size: 4em;
-  text-align: center;
-}
+/*******************/
+/* STYLE PRODUCTS */
+/*******************/
 
 #products-container {
   display: flex;
   flex-direction: column;
+}
+#products-container h2 {
+  font-size: 2em;
+  margin-left: 25px;
 }
 
 .img-products-container {
@@ -142,20 +149,26 @@ body {
   margin: 30px;
 }
 .img-slide {
-  width: 75%;
-  height: 250px;
+  width: 70%;
+  max-width: 400px;
+  max-height: 200px;
   border-radius: 50%;
 }
 .img-slide:hover {
-  width: 80%;
+  width: 72%;
 }
 
+/*******************/
 /* CONTACT STYLE */
+/*******************/
+
 #form {
   display: flex;
   flex-direction: column;
-  width: 30%;
-  margin: 30px;
+  justify-content: center;
+  width: 40%;
+  margin: 0 auto;
+  padding: 30px;
 }
 
 #email {
@@ -166,13 +179,53 @@ body {
   padding: 10px;
 }
 
+#submit {
+  margin: 10px 0 0 60% ;
+  width: fit-content;
+  border: 0;
+  background-color: #d8e2dcff ;
+  padding: 20px;
+  font-size: 1em;
+  border-radius: 20px;
+}
+#submit:hover {
+  border: 2px solid pink;
+}
+
+/*******************/
+/* GLOBAL STYLES  */
+/*******************/
+
+.section-title {
+  margin:0;
+  font-size: 4em;
+  text-align: center;
+}
+.error {
+  color: red;
+  font-size: 1em;
+  font-weight: bolder;
+  margin: 10px;
+}
+#products-container p, #container-bio p, #contact-container p  {
+  font-size: 1.2em;
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+  padding: 30px 0 30px;
+}
+
+/**************************/
 /* STYLE MOBILE FRIENDLY */
+/*************************/
+
 @media screen and (max-width: 640px) {
   #nav-bar,
   #container-img-bio {
     flex-direction: column;
   }
   .nav-link {
+    font-size: 60%;
     margin-bottom: 10px;
   }
   .img-bio {
@@ -190,5 +243,11 @@ body {
   }
   .img-slide{
     margin-top: 30px;
+  }
+  #label-video {
+    width: 90%;
+  }
+  #label-video p {
+    width: 90% !important;
   }
 }
