@@ -12,8 +12,8 @@ const Slider = ({ srcImg }) => {
         {srcImg &&
           srcImg.map((img, i) => {
             return (
-              <a href={img} target="_blank">
-                <img className="img-slide" src={img} />
+              <a href={img} target="_blank" style={{textAlign: "center"}}>
+                <div className="img-slide" > <img src={img} /> </div> 
               </a>
             )
           })}

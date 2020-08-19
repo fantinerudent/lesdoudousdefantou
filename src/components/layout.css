@@ -4,6 +4,7 @@ body {
   background-color: #ffe5d9ff;
   color: #9d8189ff;
   margin: 20px;
+  font-family: "EB Garamond", serif;
 }
 
 /*******************/
@@ -12,7 +13,7 @@ body {
 
 #header {
   background-color: #f4acb7ff;
-  font-family: "EB Garamond", serif;
+  
   font-size: 150%;
   position: fixed;
   border-bottom: 20px;
@@ -145,17 +146,26 @@ body {
 
 .img-products-container {
   display: flex;
+  justify-content: space-between;
   height: 100%;
   margin: 30px;
+
 }
-.img-slide {
-  width: 70%;
-  max-width: 400px;
-  max-height: 200px;
+.img-slide img {
+  width: 50%;
+  height: 100%;
+  max-width: 50%;
+  min-height: 180px; 
+  max-height: 180px; 
   border-radius: 50%;
 }
+.img-products-container a {
+  text-align: center;
+  flex:1;
+}
+
 .img-slide:hover {
-  width: 72%;
+  transform: scale(1.1)
 }
 
 /*******************/
@@ -180,10 +190,10 @@ body {
 }
 
 #submit {
-  margin: 10px 0 0 60% ;
+  margin: 10px 0 0 60%;
   width: fit-content;
   border: 0;
-  background-color: #d8e2dcff ;
+  background-color: #d8e2dcff;
   padding: 20px;
   font-size: 1em;
   border-radius: 20px;
@@ -197,7 +207,7 @@ body {
 /*******************/
 
 .section-title {
-  margin:0;
+  margin: 0;
   font-size: 4em;
   text-align: center;
 }
@@ -207,7 +217,9 @@ body {
   font-weight: bolder;
   margin: 10px;
 }
-#products-container p, #container-bio p, #contact-container p  {
+#products-container p,
+#container-bio p,
+#contact-container p {
   font-size: 1.2em;
   margin: 0 auto;
   width: 80%;
@@ -241,7 +253,7 @@ body {
   .img-products-container {
     flex-direction: column;
   }
-  .img-slide{
+  .img-slide {
     margin-top: 30px;
   }
   #label-video {
@@ -249,5 +261,16 @@ body {
   }
   #label-video p {
     width: 90% !important;
+  }
+}
+@media (min-width: 640px) and (max-width:915px) { 
+  .img-products-container {
+    flex-direction: column;
+  }
+  .img-slide {
+    padding-bottom: 20px;
+    min-height: 200px; 
+    max-width: 80%;
+    margin: 0 auto;
   }
 }

@@ -14,7 +14,6 @@ function Products() {
   ]
   const arrayOfImgStuffedAnimals = [
     "../../tiger.jpg",
-    "../../sheep.jpg",
     "../../stuffedowl.jpg",
     "../../hippo.jpg",
   ]
@@ -31,7 +30,7 @@ function Products() {
           donné une nouvelle façon d'exprimer notre style et notre personnalité.
           J'ai commencé à coudre des masques en tissus lavable, en suivant les
           normes AFNOR. Des centaines en quelques semaines, j'ai pu mettre à
-          profiter mes compétences pour aider les personnes qui n'avaient pas
+          profit mes compétences pour aider les personnes qui n'avaient pas
           accès aux masques (pénurie ou manque de moyen financier) en en mettant
           à disposition sur l'appui de fenêtre. Il était crucial pour moi de
           participer à mon échelle, à quelque chose d'utile durant cette période
